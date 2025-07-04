@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyrick Solutions Hub | KY4PY</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script defer>
+    let likes = 0;
+    let dislikes = 0;
+    function updateCounts() {
+      document.getElementById('like-count').textContent = likes;
+      document.getElementById('dislike-count').textContent = dislikes;
+    }
+    function like() {
+      likes++;
+      updateCounts();
+    }
+    function dislike() {
+      dislikes++;
+      updateCounts();
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d8b4f8, #b2f2ef, #fce4ec);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #d1c4e9;
+      padding: 1rem;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: purple;
+      padding: 5px;
+    }
+    .top-image {
+      width: 60px;
+      height: 60px;
+      margin-left: auto;
+      border-radius: 50%;
+    }
+    h1 {
+      margin: 0 1rem;
+      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      color: #4a148c;
+    }
+    h1 span {
+      color: #6a1b9a;
+    }
+    .tagline {
+      font-style: italic;
+      color: teal;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+    }
+    .highlight {
+      color: teal;
+      font-weight: 700;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #6a1b9a;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .services {
+      background-color: #f3e5f5;
+      padding: 2rem;
+    }
+    .services h3 {
+      text-align: center;
+    }
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+    }
+    .services li {
+      padding: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .offers {
+      text-align: center;
+      background: #e1bee7;
+      padding: 1.5rem;
+      font-weight: 600;
+      color: #4a148c;
+    }
+    .gallery {
+      padding: 2rem;
+    }
+    .gallery h3 {
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .gallery-note {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+    .here-btn {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border: none;
+      border-radius: 15px;
+      text-decoration: none;
+      margin-left: 8px;
+      font-size: 0.85rem;
+    }
+    .here-btn:hover {
+      background-color: #4a148c;
+    }
+    footer {
+      background-color: #ce93d8;
+      text-align: center;
+      padding: 1rem;
+    }
+    .likes-section {
+      margin-top: 1rem;
+    }
+    .like-button, .dislike-button {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="KY4PY Logo" class="logo">
+    <h1>Kyrick <span>Solutions Hub</span></h1>
+    <img src="images/8.jpg" alt="Brand Image" class="top-image">
+  </header>
+
+  <section class="hero">
+    <h2>Overwhelmed with <span class="highlight">Data</span> or <span class="highlight">School Work?</span></h2>
+    <p>We’ve got you covered with affordable, expert support!</p>
+    <a href="https://wa.me/254702371788" class="btn">📲 Book Now</a>
+    <div class="likes-section">
+      <span class="like-button" onclick="like()">👍</span> <span id="like-count">0</span>
+      <span class="dislike-button" onclick="dislike()">👎</span> <span id="dislike-count">0</span>
+    </div>
+  </section>
+
+  <section class="offers">
+    🎁 First-Time Offer: AI & Plagiarism Reports at just Ksh 10 per page!<br />
+    💸 Limited-Time Deal: 20% OFF any task — use it while it lasts!
+  </section>
+
+  <section class="services">
+    <h3>Our Services</h3>
+    <ul>
+      <li>📊 Software Tools & Training (Tableau, SPSS, Stata, Excel, Power BI)</li>
+      <li>🧠 Programming & Data Analysis (Python, R, SPSS/Stata/Power BI/Excel)</li>
+      <li>💼 Financial & Managerial Expertise (Accounting, NPV, IRR)</li>
+      <li>🌐 Portfolio & Web Development (Website Portfolios)</li>
+      <li>📄 Specialized Reports (AI Insights, Plagiarism Reports, Essays, Term Papers)</li>
+      <li>📈 Presentations & Deliverables (PowerPoint Design, Data Reports)</li>
+      <li>🖥️ Online Support (Assignments, Real-Time Consulting)</li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h3>Showcase</h3>
+    <div class="gallery-grid">
+      <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Work sample 1" /></a>
+      <a href="images/2.jpg" target="_blank"><img src="images/2.jpg" alt="Work sample 2" /></a>
+      <a href="images/3.jpg" target="_blank"><img src="images/3.jpg" alt="Work sample 3" /></a>
+      <a href="images/4.jpg" target="_blank"><img src="images/4.jpg" alt="Work sample 4" /></a>
+      <a href="images/5.jpg" target="_blank"><img src="images/5.jpg" alt="Work sample 5" /></a>
+      <a href="images/6.jpg" target="_blank"><img src="images/6.jpg" alt="Work sample 6" /></a>
+      <a href="images/7.jpg" target="_blank"><img src="images/7.jpg" alt="Work sample 7" /></a>
+    </div>
+    <p class="gallery-note">This is only a small sample of work done — more can be provided upon request <a href="https://wa.me/254702371788" class="here-btn">here</a>.</p>
+  </section>
+
+  <footer>
+    <p>📞 WhatsApp: <a href="https://wa.me/254702371788">+254702371788</a> | 📧 Email: <a href="mailto:kygopython@gmail.com">kygopython@gmail.com</a></p>
+    <p><strong>Click the link above to reach us at affordable services.</strong></p>
+  </footer>
+
+</body>
+</html>
