@@ -104,16 +104,6 @@
       }
     }
 
-    @keyframes glow {
-      0%, 100% {
-        box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
-      }
-    }
-
-    /* Header */
     header {
       display: flex;
       align-items: center;
@@ -212,7 +202,6 @@
       animation: fadeInDown 0.8s ease-out 1.2s both;
     }
 
-    /* Hero Section */
     .hero {
       text-align: center;
       padding: 4rem 2rem;
@@ -270,7 +259,6 @@
       transform: scale(0.98);
     }
 
-    /* Feedback Section */
     .likes-section {
       margin-top: 3rem;
       padding: 2rem;
@@ -321,7 +309,6 @@
       text-align: center;
     }
 
-    /* Offers Section */
     .offers {
       text-align: center;
       background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(255, 0, 110, 0.1));
@@ -338,7 +325,6 @@
       color: #e0e0e0;
     }
 
-    /* Services Section */
     .services {
       background: rgba(138, 43, 226, 0.05);
       padding: 4rem 2rem;
@@ -389,7 +375,6 @@
       font-size: 0.95rem;
     }
 
-    /* Gallery Section */
     .gallery {
       padding: 4rem 2rem;
       animation: fadeInUp 1s ease-out 0.6s both;
@@ -407,11 +392,12 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       max-width: 100%;
       margin: 0 auto;
       width: 100%;
+      padding: 0 1rem;
     }
 
     .gallery-item {
@@ -468,7 +454,6 @@
       box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
     }
 
-    /* Footer */
     footer {
       background: linear-gradient(135deg, rgba(20, 15, 50, 0.9), rgba(138, 43, 226, 0.1));
       text-align: center;
@@ -494,7 +479,6 @@
       color: #b0b0b0;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       h1 {
         font-size: 1.4rem;
@@ -504,8 +488,12 @@
         font-size: 2rem;
       }
 
-      .services-grid, .gallery-grid {
+      .services-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .likes-section {
@@ -518,10 +506,15 @@
         font-size: 1rem;
       }
     }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="logo-section">
       <div class="logo-box">KY</div>
@@ -534,13 +527,11 @@
     <img src="images/8.jpg" alt="Brand Image" class="top-image">
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h2>Overwhelmed with <span class="highlight">Data</span> or <span class="highlight">Schoolwork?</span></h2>
     <p>Expert solutions tailored to your needs — affordable, reliable, professional</p>
     <a href="https://wa.me/254716140339" class="btn">📲 Book Consultation Now</a>
     
-    <!-- Feedback Section -->
     <div class="likes-section">
       <div class="feedback-item">
         <span class="like-button" id="likeBtn" onclick="handleLike()">👍</span>
@@ -555,13 +546,11 @@
     </div>
   </section>
 
-  <!-- Offers Section -->
   <section class="offers">
     <p>🎁 <strong>First-Time Offer:</strong> AI & Plagiarism Reports at just Ksh 10 per page!</p>
     <p>💸 <strong>Limited-Time Deal:</strong> 20% OFF any task — use it while it lasts!</p>
   </section>
 
-  <!-- Services Section -->
   <section class="services">
     <h3>Our Services</h3>
     <div class="services-grid">
@@ -596,7 +585,6 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
   <section class="gallery">
     <h3>Showcase</h3>
     <div class="gallery-grid">
@@ -639,38 +627,38 @@
       <a class="gallery-item" href="images/13.jpg" target="_blank">
         <img src="images/13.jpg" alt="Work sample 13" />
       </a>
-      <a class="gallery-item" href="images/14.jpg" target="_blank">
-        <img src="images/14.jpg" alt="Work sample 14" />
+      <a class="gallery-item" href="images/14.jpeg" target="_blank">
+        <img src="images/14.jpeg" alt="Work sample 14" />
       </a>
-      <a class="gallery-item" href="images/15.jpg" target="_blank">
-        <img src="images/15.jpg" alt="Work sample 15" />
+      <a class="gallery-item" href="images/15.png" target="_blank">
+        <img src="images/15.png" alt="Work sample 15" />
       </a>
-      <a class="gallery-item" href="images/16.jpg" target="_blank">
-        <img src="images/16.jpg" alt="Work sample 16" />
+      <a class="gallery-item" href="images/16.jpeg" target="_blank">
+        <img src="images/16.jpeg" alt="Work sample 16" />
       </a>
-      <a class="gallery-item" href="images/17.jpg" target="_blank">
-        <img src="images/17.jpg" alt="Work sample 17" />
+      <a class="gallery-item" href="images/17.png" target="_blank">
+        <img src="images/17.png" alt="Work sample 17" />
       </a>
-      <a class="gallery-item" href="images/18.jpg" target="_blank">
-        <img src="images/18.jpg" alt="Work sample 18" />
+      <a class="gallery-item" href="images/18.jpeg" target="_blank">
+        <img src="images/18.jpeg" alt="Work sample 18" />
       </a>
-      <a class="gallery-item" href="images/19.jpg" target="_blank">
-        <img src="images/19.jpg" alt="Work sample 19" />
+      <a class="gallery-item" href="images/19.png" target="_blank">
+        <img src="images/19.png" alt="Work sample 19" />
       </a>
-      <a class="gallery-item" href="images/20.jpg" target="_blank">
-        <img src="images/20.jpg" alt="Work sample 20" />
+      <a class="gallery-item" href="images/20.jpeg" target="_blank">
+        <img src="images/20.jpeg" alt="Work sample 20" />
       </a>
-      <a class="gallery-item" href="images/21.jpg" target="_blank">
-        <img src="images/21.jpg" alt="Work sample 21" />
+      <a class="gallery-item" href="images/21.jpeg" target="_blank">
+        <img src="images/21.jpeg" alt="Work sample 21" />
       </a>
-      <a class="gallery-item" href="images/22.jpg" target="_blank">
-        <img src="images/22.jpg" alt="Work sample 22" />
+      <a class="gallery-item" href="images/22.jpeg" target="_blank">
+        <img src="images/22.jpeg" alt="Work sample 22" />
       </a>
-      <a class="gallery-item" href="images/23.jpg" target="_blank">
-        <img src="images/23.jpg" alt="Work sample 23" />
+      <a class="gallery-item" href="images/23.png" target="_blank">
+        <img src="images/23.png" alt="Work sample 23" />
       </a>
-      <a class="gallery-item" href="images/24.jpg" target="_blank">
-        <img src="images/24.jpg" alt="Work sample 24" />
+      <a class="gallery-item" href="images/24.jpeg" target="_blank">
+        <img src="images/24.jpeg" alt="Work sample 24" />
       </a>
       <a class="gallery-item" href="images/25.jpg" target="_blank">
         <img src="images/25.jpg" alt="Work sample 25" />
@@ -684,7 +672,6 @@
     </p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/254716140339">+254716140339</a></p>
     <p>📧 <strong>Email:</strong> <a href="mailto:kygopython@gmail.com">kygopython@gmail.com</a></p>
@@ -692,7 +679,6 @@
   </footer>
 
   <script>
-    // Load persistent feedback data
     function loadFeedback() {
       const savedLikes = localStorage.getItem('kylyst_likes') || '0';
       const savedDislikes = localStorage.getItem('kylyst_dislikes') || '0';
@@ -704,7 +690,6 @@
       window.currentDislikes = parseInt(savedDislikes);
     }
 
-    // Handle Like
     function handleLike() {
       window.currentLikes++;
       document.getElementById('like-count').textContent = window.currentLikes;
@@ -717,7 +702,6 @@
       }, 500);
     }
 
-    // Handle Dislike
     function handleDislike() {
       window.currentDislikes++;
       document.getElementById('dislike-count').textContent = window.currentDislikes;
@@ -730,7 +714,6 @@
       }, 500);
     }
 
-    // Load on page load
     window.addEventListener('load', loadFeedback);
   </script>
 </body>
