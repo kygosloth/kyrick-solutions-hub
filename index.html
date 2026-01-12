@@ -20,7 +20,59 @@
       line-height: 1.6;
     }
 
-    /* Animations */
+    /* Cinematic Animations */
+    @keyframes cinematicK {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.5);
+        filter: blur(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes cinematicY {
+      0% {
+        opacity: 0;
+        transform: translateX(100px) scale(0.5);
+        filter: blur(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes cinematicL {
+      0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5);
+        filter: blur(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes cinematicRest {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+        filter: blur(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+      }
+    }
+
     @keyframes fadeInDown {
       from {
         opacity: 0;
@@ -43,28 +95,6 @@
       }
     }
 
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
     @keyframes pulse {
       0%, 100% {
         opacity: 1;
@@ -81,39 +111,6 @@
       50% {
         box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
       }
-    }
-
-    @keyframes floatUp {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-    }
-
-    .animate-fade-down {
-      animation: fadeInDown 0.8s ease-out;
-    }
-
-    .animate-fade-up {
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .animate-slide-left {
-      animation: slideInLeft 0.8s ease-out;
-    }
-
-    .animate-slide-right {
-      animation: slideInRight 0.8s ease-out;
-    }
-
-    .animate-glow {
-      animation: glow 2s ease-in-out infinite;
-    }
-
-    .animate-float {
-      animation: floatUp 3s ease-in-out infinite;
     }
 
     /* Header */
@@ -135,7 +132,6 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      animation: slideInLeft 0.8s ease-out;
     }
 
     .logo-box {
@@ -155,11 +151,56 @@
     h1 {
       font-size: 1.8rem;
       font-family: 'Playfair Display', serif;
+      margin: 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .char-k {
       background: linear-gradient(135deg, #8a2be2, #ff006e);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin: 0;
+      animation: cinematicK 0.8s ease-out 0.2s both;
+      font-weight: 700;
+    }
+
+    .char-y {
+      background: linear-gradient(135deg, #8a2be2, #ff006e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: cinematicY 0.8s ease-out 0.4s both;
+      font-weight: 700;
+    }
+
+    .char-l {
+      background: linear-gradient(135deg, #8a2be2, #ff006e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: cinematicL 0.8s ease-out 0.6s both;
+      font-weight: 700;
+    }
+
+    .char-yst {
+      background: linear-gradient(135deg, #8a2be2, #ff006e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: cinematicRest 0.8s ease-out 0.8s both;
+      font-weight: 700;
+    }
+
+    .solutions-hub {
+      background: linear-gradient(135deg, #ff006e, #8a2be2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: cinematicRest 0.8s ease-out 1s both;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
     .top-image {
@@ -168,7 +209,7 @@
       border-radius: 12px;
       object-fit: cover;
       border: 2px solid rgba(138, 43, 226, 0.5);
-      animation: slideInRight 0.8s ease-out;
+      animation: fadeInDown 0.8s ease-out 1.2s both;
     }
 
     /* Hero Section */
@@ -185,6 +226,7 @@
       margin-bottom: 1rem;
       font-family: 'Playfair Display', serif;
       line-height: 1.2;
+      animation: fadeInUp 1s ease-out 0.3s both;
     }
 
     .highlight {
@@ -199,7 +241,7 @@
       font-size: 1.2rem;
       margin-bottom: 2rem;
       color: #b0b0b0;
-      animation: fadeInUp 1.2s ease-out;
+      animation: fadeInUp 1s ease-out 0.5s both;
     }
 
     .btn {
@@ -216,7 +258,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
       box-shadow: 0 8px 24px rgba(138, 43, 226, 0.4);
-      animation: fadeInUp 1.4s ease-out;
+      animation: fadeInUp 1s ease-out 0.7s both;
     }
 
     .btn:hover {
@@ -238,7 +280,7 @@
       justify-content: center;
       align-items: center;
       gap: 3rem;
-      animation: fadeInUp 1.6s ease-out;
+      animation: fadeInUp 1s ease-out 0.9s both;
       border: 2px solid rgba(138, 43, 226, 0.2);
     }
 
@@ -288,7 +330,7 @@
       font-size: 1.1rem;
       border-left: 4px solid #8a2be2;
       border-right: 4px solid #ff006e;
-      animation: fadeInUp 1.8s ease-out;
+      animation: fadeInUp 1s ease-out 0.2s both;
     }
 
     .offers p {
@@ -300,7 +342,7 @@
     .services {
       background: rgba(138, 43, 226, 0.05);
       padding: 4rem 2rem;
-      animation: fadeInUp 1.4s ease-out;
+      animation: fadeInUp 1s ease-out 0.4s both;
     }
 
     .services h3 {
@@ -327,7 +369,7 @@
       border-radius: 15px;
       border: 2px solid rgba(138, 43, 226, 0.2);
       transition: all 0.3s ease;
-      animation: fadeInUp 2s ease-out;
+      animation: fadeInUp 1s ease-out;
     }
 
     .service-card:hover {
@@ -350,7 +392,7 @@
     /* Gallery Section */
     .gallery {
       padding: 4rem 2rem;
-      animation: fadeInUp 1.6s ease-out;
+      animation: fadeInUp 1s ease-out 0.6s both;
     }
 
     .gallery h3 {
@@ -377,7 +419,7 @@
       border-radius: 15px;
       border: 2px solid rgba(138, 43, 226, 0.2);
       transition: all 0.3s ease;
-      animation: fadeInUp 2.2s ease-out;
+      animation: fadeInUp 1s ease-out;
     }
 
     .gallery-item img {
@@ -402,7 +444,7 @@
       font-size: 1rem;
       margin-top: 2rem;
       color: #b0b0b0;
-      animation: fadeInUp 2.4s ease-out;
+      animation: fadeInUp 1s ease-out 0.8s both;
     }
 
     .here-btn {
@@ -431,7 +473,7 @@
       text-align: center;
       padding: 2.5rem;
       border-top: 2px solid rgba(138, 43, 226, 0.3);
-      animation: fadeInUp 1.8s ease-out;
+      animation: fadeInUp 1s ease-out 1s both;
     }
 
     footer a {
@@ -482,7 +524,11 @@
   <header>
     <div class="logo-section">
       <div class="logo-box">KY</div>
-      <h1>KYLYST <br>Solutions Hub</h1>
+      <h1>
+        <span class="char-k">K</span><span class="char-y">Y</span><span class="char-l">L</span><span class="char-yst">YST</span>
+        <br>
+        <span class="solutions-hub">Solutions Hub</span>
+      </h1>
     </div>
     <img src="images/8.jpg" alt="Brand Image" class="top-image">
   </header>
@@ -491,7 +537,7 @@
   <section class="hero">
     <h2>Overwhelmed with <span class="highlight">Data</span> or <span class="highlight">Schoolwork?</span></h2>
     <p>Expert solutions tailored to your needs — affordable, reliable, professional</p>
-    <a href="https://wa.me/254702371788" class="btn">📲 Book Consultation Now</a>
+    <a href="https://wa.me/254716140339" class="btn">📲 Book Consultation Now</a>
     
     <!-- Feedback Section -->
     <div class="likes-section">
@@ -574,15 +620,72 @@
       <a class="gallery-item" href="images/7.jpg" target="_blank">
         <img src="images/7.jpg" alt="Work sample 7" />
       </a>
+      <a class="gallery-item" href="images/8.jpg" target="_blank">
+        <img src="images/8.jpg" alt="Work sample 8" />
+      </a>
+      <a class="gallery-item" href="images/9.jpg" target="_blank">
+        <img src="images/9.jpg" alt="Work sample 9" />
+      </a>
+      <a class="gallery-item" href="images/10.jpg" target="_blank">
+        <img src="images/10.jpg" alt="Work sample 10" />
+      </a>
+      <a class="gallery-item" href="images/11.jpg" target="_blank">
+        <img src="images/11.jpg" alt="Work sample 11" />
+      </a>
+      <a class="gallery-item" href="images/12.jpg" target="_blank">
+        <img src="images/12.jpg" alt="Work sample 12" />
+      </a>
+      <a class="gallery-item" href="images/13.jpg" target="_blank">
+        <img src="images/13.jpg" alt="Work sample 13" />
+      </a>
+      <a class="gallery-item" href="images/14.jpg" target="_blank">
+        <img src="images/14.jpg" alt="Work sample 14" />
+      </a>
+      <a class="gallery-item" href="images/15.jpg" target="_blank">
+        <img src="images/15.jpg" alt="Work sample 15" />
+      </a>
+      <a class="gallery-item" href="images/16.jpg" target="_blank">
+        <img src="images/16.jpg" alt="Work sample 16" />
+      </a>
+      <a class="gallery-item" href="images/17.jpg" target="_blank">
+        <img src="images/17.jpg" alt="Work sample 17" />
+      </a>
+      <a class="gallery-item" href="images/18.jpg" target="_blank">
+        <img src="images/18.jpg" alt="Work sample 18" />
+      </a>
+      <a class="gallery-item" href="images/19.jpg" target="_blank">
+        <img src="images/19.jpg" alt="Work sample 19" />
+      </a>
+      <a class="gallery-item" href="images/20.jpg" target="_blank">
+        <img src="images/20.jpg" alt="Work sample 20" />
+      </a>
+      <a class="gallery-item" href="images/21.jpg" target="_blank">
+        <img src="images/21.jpg" alt="Work sample 21" />
+      </a>
+      <a class="gallery-item" href="images/22.jpg" target="_blank">
+        <img src="images/22.jpg" alt="Work sample 22" />
+      </a>
+      <a class="gallery-item" href="images/23.jpg" target="_blank">
+        <img src="images/23.jpg" alt="Work sample 23" />
+      </a>
+      <a class="gallery-item" href="images/24.jpg" target="_blank">
+        <img src="images/24.jpg" alt="Work sample 24" />
+      </a>
+      <a class="gallery-item" href="images/25.jpg" target="_blank">
+        <img src="images/25.jpg" alt="Work sample 25" />
+      </a>
+      <a class="gallery-item" href="images/26.jpg" target="_blank">
+        <img src="images/26.jpg" alt="Work sample 26" />
+      </a>
     </div>
     <p class="gallery-note">This is only a small sample of our work — more available upon request 
-      <a href="https://wa.me/254702371788" class="here-btn">Get More →</a>
+      <a href="https://wa.me/254716140339" class="here-btn">Get More →</a>
     </p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/254702371788">+254702371788</a></p>
+    <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/254716140339">+254716140339</a></p>
     <p>📧 <strong>Email:</strong> <a href="mailto:kygopython@gmail.com">kygopython@gmail.com</a></p>
     <p><strong>Click to reach us — Affordable, Professional, Reliable Services</strong></p>
   </footer>
